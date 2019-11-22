@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FlagFacts"
              xmlns:eff="clr-namespace:FlagFacts.Effects"
+             xmlns:data="clr-namespace:FlagData;assembly=FlagData"
+             xmlns:cvt1="clr-namespace:Converters"
              x:Class="FlagFacts.MainPage"
              Title="Fun with Flags">
-          
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cvt1:EmbeddedImageConvverter x:Key="irConverter"
+                    ResolvingAssemblyType="{x:Type data:Flag}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+ 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Previous"
                      Clicked="OnPrevious" Icon="ic_arrow_drop_up_black.png" />
@@ -26,7 +34,8 @@
                 </OnPlatform>
             </StackLayout.Padding>
 
-            <Image x:Name="flagImage" HeightRequest="200" 
+            <Image HeightRequest="200"
+                   Source="{Binding ImageUrl, Mode=OneWay, Converter={StaticResource irConverter}}"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Aspect="AspectFit" />

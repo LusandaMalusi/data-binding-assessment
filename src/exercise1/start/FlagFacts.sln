@@ -6,9 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagFacts.Android", "FlagFa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagFacts.iOS", "FlagFacts.iOS\FlagFacts.iOS.csproj", "{B92F0639-E53E-450F-B748-CD18AD78ABEB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagFacts", "FlagFacts\FlagFacts.csproj", "{587AD52F-E861-4359-93F9-0B5013BFE4A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converters", "FlagFacts\Converters.csproj", "{587AD52F-E861-4359-93F9-0B5013BFE4A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagData", "FlagData\FlagData.csproj", "{88E65A22-F559-431B-A8EA-301B2F8B339D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagData", "FlagData\FlagData.csproj", "{88E65A22-F559-431B-A8EA-301B2F8B339D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
